@@ -4,9 +4,15 @@ export const counterContext = React.createContext();
 
 
 
-function addToCount(count){
-  
+function addToCount(){
+    return <button onClick={() => this.setState({ counter: this.state.counter + 1})}>{this.state.count}</button>;
+  }
+
+function takeFromCount(){
+  return <button onClick={() => this.setState({ counter: this.state.counter -1})}>{this.state.count}</button>;
 }
+
+
 
 class contextProvider extends React.Component {
   constructor(props) {
